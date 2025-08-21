@@ -1,0 +1,125 @@
+[
+  {
+    "X": 576,
+    "Y": 345,
+    "Width": 204,
+    "Height": 214,
+    "Name": "Rectangle",
+    "Value": "",
+    "Layer": 999,
+    "HitRadius": 6,
+    "Children": [
+      {
+        "X": 584,
+        "Y": 482,
+        "Width": 193,
+        "Height": 33,
+        "Name": "Rectangle",
+        "Value": "",
+        "Layer": 998,
+        "HitRadius": 6,
+        "Children": [],
+        "Color": "#FF008000"
+      },
+      {
+        "X": 592,
+        "Y": 525,
+        "Width": 177,
+        "Height": 25,
+        "Name": "Rectangle",
+        "Value": "",
+        "Layer": 997,
+        "HitRadius": 6,
+        "Children": [],
+        "Color": "#FF008000"
+      },
+      {
+        "X": 592,
+        "Y": 373,
+        "Width": 172,
+        "Height": 59,
+        "Name": "Rectangle",
+        "Value": "",
+        "Layer": 996,
+        "HitRadius": 6,
+        "Children": [],
+        "Color": "#FF008000"
+      }
+    ],
+    "Color": "#FF008000"
+  },
+  {
+    "X": 290,
+    "Y": 244,
+    "Width": 155,
+    "Height": 170,
+    "Name": "Rectangle",
+    "Value": "",
+    "Layer": 999,
+    "HitRadius": 6,
+    "Children": [
+      {
+        "X": 303,
+        "Y": 394,
+        "Width": 128,
+        "Height": 14,
+        "Name": "Rectangle",
+        "Value": "",
+        "Layer": 997,
+        "HitRadius": 6,
+        "Children": [],
+        "Color": "#FF008000"
+      },
+      {
+        "X": 303,
+        "Y": 314,
+        "Width": 103,
+        "Height": 28,
+        "Name": "Rectangle",
+        "Value": "",
+        "Layer": 994,
+        "HitRadius": 6,
+        "Children": [],
+        "Color": "#FF008000"
+      }
+    ],
+    "Color": "#FF008000"
+  },
+  {
+    "X": 59,
+    "Y": 111,
+    "Width": 155,
+    "Height": 180,
+    "Name": "Rectangle",
+    "Value": "",
+    "Layer": 998,
+    "HitRadius": 6,
+    "Children": [
+      {
+        "X": 77,
+        "Y": 198,
+        "Width": 126,
+        "Height": 31,
+        "Name": "Rectangle",
+        "Value": "",
+        "Layer": 996,
+        "HitRadius": 6,
+        "Children": [],
+        "Color": "#FF008000"
+      },
+      {
+        "X": 69,
+        "Y": 250,
+        "Width": 110,
+        "Height": 33,
+        "Name": "Rectangle",
+        "Value": "",
+        "Layer": 995,
+        "HitRadius": 6,
+        "Children": [],
+        "Color": "#FF008000"
+      }
+    ],
+    "Color": "#FF008000"
+  }
+]
