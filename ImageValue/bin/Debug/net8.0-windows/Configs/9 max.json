@@ -50,8 +50,8 @@
         "Color": "#FFFFFFFF"
       },
       {
-        "X": 479,
-        "Y": 510,
+        "X": 473,
+        "Y": 513,
         "Width": 36,
         "Height": 67,
         "Name": "cards2",
@@ -118,8 +118,8 @@
     "Color": "#FFFFFFFF"
   },
   {
-    "X": 54,
-    "Y": 392,
+    "X": 140,
+    "Y": 407,
     "Width": 131,
     "Height": 159,
     "Name": "Player2",
@@ -129,8 +129,8 @@
     "NotShow": false,
     "Children": [
       {
-        "X": 54,
-        "Y": 490,
+        "X": 140,
+        "Y": 505,
         "Width": 127,
         "Height": 29,
         "Name": "nickname",
@@ -142,8 +142,8 @@
         "Color": "#FFFFFFFF"
       },
       {
-        "X": 54,
-        "Y": 520,
+        "X": 140,
+        "Y": 535,
         "Width": 128,
         "Height": 27,
         "Name": "stack_bb",
@@ -155,8 +155,8 @@
         "Color": "#FFFFFFFF"
       },
       {
-        "X": 60,
-        "Y": 408,
+        "X": 146,
+        "Y": 423,
         "Width": 40,
         "Height": 71,
         "Name": "cards1",
@@ -168,8 +168,8 @@
         "Color": "#FFFFFFFF"
       },
       {
-        "X": 114,
-        "Y": 410,
+        "X": 190,
+        "Y": 426,
         "Width": 36,
         "Height": 67,
         "Name": "cards2",
@@ -181,8 +181,8 @@
         "Color": "#FFFFFFFF"
       },
       {
-        "X": -366,
-        "Y": -124,
+        "X": -280,
+        "Y": -109,
         "Width": 0,
         "Height": 0,
         "Name": "action",
@@ -194,8 +194,8 @@
         "Color": "#FFFFFFFF"
       },
       {
-        "X": -366,
-        "Y": -124,
+        "X": -280,
+        "Y": -109,
         "Width": 0,
         "Height": 0,
         "Name": "position",
@@ -207,10 +207,10 @@
         "Color": "#FFFFFFFF"
       },
       {
-        "X": 202,
-        "Y": 437,
-        "Width": 55,
-        "Height": 26,
+        "X": 274,
+        "Y": 431,
+        "Width": 65,
+        "Height": 28,
         "Name": "bet_bb",
         "Value": "",
         "Layer": 997,
@@ -220,10 +220,10 @@
         "Color": "#FFFFFFFF"
       },
       {
-        "X": 212,
-        "Y": 472,
+        "X": 275,
+        "Y": 469,
         "Width": 26,
-        "Height": 24,
+        "Height": 32,
         "Name": "is_dealer",
         "Value": "true",
         "Layer": 996,
@@ -236,8 +236,8 @@
     "Color": "#FFFFFFFF"
   },
   {
-    "X": 77,
-    "Y": 116,
+    "X": 16,
+    "Y": 232,
     "Width": 131,
     "Height": 159,
     "Name": "Player3",
@@ -247,8 +247,8 @@
     "NotShow": false,
     "Children": [
       {
-        "X": 77,
-        "Y": 214,
+        "X": 16,
+        "Y": 330,
         "Width": 127,
         "Height": 29,
         "Name": "nickname",
@@ -260,8 +260,8 @@
         "Color": "#FFFFFFFF"
       },
       {
-        "X": 77,
-        "Y": 244,
+        "X": 16,
+        "Y": 360,
         "Width": 128,
         "Height": 27,
         "Name": "stack_bb",
@@ -273,8 +273,8 @@
         "Color": "#FFFFFFFF"
       },
       {
-        "X": 77,
-        "Y": 136,
+        "X": 16,
+        "Y": 252,
         "Width": 40,
         "Height": 63,
         "Name": "cards1",
@@ -286,8 +286,8 @@
         "Color": "#FFFFFFFF"
       },
       {
-        "X": 123,
-        "Y": 135,
+        "X": 62,
+        "Y": 251,
         "Width": 36,
         "Height": 67,
         "Name": "cards2",
@@ -299,8 +299,8 @@
         "Color": "#FFFFFFFF"
       },
       {
-        "X": -343,
-        "Y": -400,
+        "X": -404,
+        "Y": -284,
         "Width": 0,
         "Height": 0,
         "Name": "action",
@@ -312,8 +312,8 @@
         "Color": "#FFFFFFFF"
       },
       {
-        "X": -343,
-        "Y": -400,
+        "X": -404,
+        "Y": -284,
         "Width": 0,
         "Height": 0,
         "Name": "position",
@@ -325,8 +325,8 @@
         "Color": "#FFFFFFFF"
       },
       {
-        "X": 237,
-        "Y": 266,
+        "X": 149,
+        "Y": 348,
         "Width": 55,
         "Height": 26,
         "Name": "bet_bb",
@@ -338,8 +338,8 @@
         "Color": "#FFFFFFFF"
       },
       {
-        "X": 214,
-        "Y": 242,
+        "X": 137,
+        "Y": 371,
         "Width": 28,
         "Height": 26,
         "Name": "is_dealer",
@@ -354,8 +354,8 @@
     "Color": "#FFFFFFFF"
   },
   {
-    "X": 420,
-    "Y": 57,
+    "X": 120,
+    "Y": 76,
     "Width": 131,
     "Height": 159,
     "Name": "Player4",
@@ -365,8 +365,8 @@
     "NotShow": false,
     "Children": [
       {
-        "X": 420,
-        "Y": 155,
+        "X": 120,
+        "Y": 174,
         "Width": 127,
         "Height": 29,
         "Name": "nickname",
@@ -378,8 +378,8 @@
         "Color": "#FFFFFFFF"
       },
       {
-        "X": 420,
-        "Y": 185,
+        "X": 120,
+        "Y": 204,
         "Width": 128,
         "Height": 27,
         "Name": "stack_bb",
@@ -391,8 +391,8 @@
         "Color": "#FFFFFFFF"
       },
       {
-        "X": 420,
-        "Y": 77,
+        "X": 120,
+        "Y": 96,
         "Width": 40,
         "Height": 63,
         "Name": "cards1",
@@ -404,8 +404,8 @@
         "Color": "#FFFFFFFF"
       },
       {
-        "X": 466,
-        "Y": 76,
+        "X": 166,
+        "Y": 95,
         "Width": 36,
         "Height": 67,
         "Name": "cards2",
@@ -417,8 +417,8 @@
         "Color": "#FFFFFFFF"
       },
       {
-        "X": 0,
-        "Y": -459,
+        "X": -300,
+        "Y": -440,
         "Width": 0,
         "Height": 0,
         "Name": "action",
@@ -430,8 +430,8 @@
         "Color": "#FFFFFFFF"
       },
       {
-        "X": 0,
-        "Y": -459,
+        "X": -300,
+        "Y": -440,
         "Width": 0,
         "Height": 0,
         "Name": "position",
@@ -443,8 +443,8 @@
         "Color": "#FFFFFFFF"
       },
       {
-        "X": 465,
-        "Y": 231,
+        "X": 211,
+        "Y": 261,
         "Width": 55,
         "Height": 26,
         "Name": "bet_bb",
@@ -456,126 +456,8 @@
         "Color": "#FFFFFFFF"
       },
       {
-        "X": 565,
-        "Y": 212,
-        "Width": 26,
-        "Height": 24,
-        "Name": "is_dealer",
-        "Value": "true",
-        "Layer": 996,
-        "HitRadius": 6,
-        "NotShow": false,
-        "Children": [],
-        "Color": "#FFFFFFFF"
-      }
-    ],
-    "Color": "#FFFFFFFF"
-  },
-  {
-    "X": 778,
-    "Y": 118,
-    "Width": 131,
-    "Height": 159,
-    "Name": "Player5",
-    "Value": "UTG",
-    "Layer": 999,
-    "HitRadius": 6,
-    "NotShow": false,
-    "Children": [
-      {
-        "X": 779,
-        "Y": 223,
-        "Width": 125,
-        "Height": 22,
-        "Name": "nickname",
-        "Value": "Dmitry[B]",
-        "Layer": 998,
-        "HitRadius": 6,
-        "NotShow": false,
-        "Children": [],
-        "Color": "#FFFFFFFF"
-      },
-      {
-        "X": 778,
+        "X": 180,
         "Y": 246,
-        "Width": 128,
-        "Height": 27,
-        "Name": "stack_bb",
-        "Value": "6.5",
-        "Layer": 997,
-        "HitRadius": 6,
-        "NotShow": false,
-        "Children": [],
-        "Color": "#FFFFFFFF"
-      },
-      {
-        "X": 778,
-        "Y": 138,
-        "Width": 40,
-        "Height": 63,
-        "Name": "cards1",
-        "Value": "3c",
-        "Layer": 993,
-        "HitRadius": 6,
-        "NotShow": false,
-        "Children": [],
-        "Color": "#FFFFFFFF"
-      },
-      {
-        "X": 824,
-        "Y": 137,
-        "Width": 36,
-        "Height": 67,
-        "Name": "cards2",
-        "Value": "2d",
-        "Layer": 992,
-        "HitRadius": 6,
-        "NotShow": false,
-        "Children": [],
-        "Color": "#FFFFFFFF"
-      },
-      {
-        "X": 358,
-        "Y": -398,
-        "Width": 0,
-        "Height": 0,
-        "Name": "action",
-        "Value": "Fold",
-        "Layer": 0,
-        "HitRadius": 6,
-        "NotShow": false,
-        "Children": [],
-        "Color": "#FFFFFFFF"
-      },
-      {
-        "X": 358,
-        "Y": -398,
-        "Width": 0,
-        "Height": 0,
-        "Name": "position",
-        "Value": "CO",
-        "Layer": 0,
-        "HitRadius": 6,
-        "NotShow": false,
-        "Children": [],
-        "Color": "#FFFFFFFF"
-      },
-      {
-        "X": 695,
-        "Y": 265,
-        "Width": 55,
-        "Height": 26,
-        "Name": "bet_bb",
-        "Value": "0.5",
-        "Layer": 997,
-        "HitRadius": 6,
-        "NotShow": false,
-        "Children": [],
-        "Color": "#FFFFFFFF"
-      },
-      {
-        "X": 699,
-        "Y": 198,
         "Width": 26,
         "Height": 24,
         "Name": "is_dealer",
@@ -590,8 +472,8 @@
     "Color": "#FFFFFFFF"
   },
   {
-    "X": 809,
-    "Y": 395,
+    "X": 325,
+    "Y": 44,
     "Width": 131,
     "Height": 159,
     "Name": "Player5",
@@ -601,8 +483,8 @@
     "NotShow": false,
     "Children": [
       {
-        "X": 810,
-        "Y": 500,
+        "X": 326,
+        "Y": 149,
         "Width": 125,
         "Height": 22,
         "Name": "nickname",
@@ -614,8 +496,8 @@
         "Color": "#FFFFFFFF"
       },
       {
-        "X": 809,
-        "Y": 523,
+        "X": 325,
+        "Y": 172,
         "Width": 128,
         "Height": 27,
         "Name": "stack_bb",
@@ -627,8 +509,8 @@
         "Color": "#FFFFFFFF"
       },
       {
-        "X": 809,
-        "Y": 415,
+        "X": 329,
+        "Y": 52,
         "Width": 40,
         "Height": 63,
         "Name": "cards1",
@@ -640,8 +522,8 @@
         "Color": "#FFFFFFFF"
       },
       {
-        "X": 855,
-        "Y": 414,
+        "X": 378,
+        "Y": 50,
         "Width": 36,
         "Height": 67,
         "Name": "cards2",
@@ -653,8 +535,8 @@
         "Color": "#FFFFFFFF"
       },
       {
-        "X": 389,
-        "Y": -121,
+        "X": -95,
+        "Y": -472,
         "Width": 0,
         "Height": 0,
         "Name": "action",
@@ -666,8 +548,8 @@
         "Color": "#FFFFFFFF"
       },
       {
-        "X": 389,
-        "Y": -121,
+        "X": -95,
+        "Y": -472,
         "Width": 0,
         "Height": 0,
         "Name": "position",
@@ -679,10 +561,10 @@
         "Color": "#FFFFFFFF"
       },
       {
-        "X": 714,
-        "Y": 439,
-        "Width": 55,
-        "Height": 26,
+        "X": 349,
+        "Y": 227,
+        "Width": 58,
+        "Height": 25,
         "Name": "bet_bb",
         "Value": "0.5",
         "Layer": 997,
@@ -692,8 +574,8 @@
         "Color": "#FFFFFFFF"
       },
       {
-        "X": 730,
-        "Y": 475,
+        "X": 347,
+        "Y": 193,
         "Width": 26,
         "Height": 24,
         "Name": "is_dealer",
@@ -708,8 +590,480 @@
     "Color": "#FFFFFFFF"
   },
   {
-    "X": 277,
-    "Y": 258,
+    "X": 517,
+    "Y": 35,
+    "Width": 131,
+    "Height": 159,
+    "Name": "Player5",
+    "Value": "UTG",
+    "Layer": 999,
+    "HitRadius": 6,
+    "NotShow": false,
+    "Children": [
+      {
+        "X": 518,
+        "Y": 140,
+        "Width": 125,
+        "Height": 22,
+        "Name": "nickname",
+        "Value": "Dmitry[B]",
+        "Layer": 998,
+        "HitRadius": 6,
+        "NotShow": false,
+        "Children": [],
+        "Color": "#FFFFFFFF"
+      },
+      {
+        "X": 517,
+        "Y": 163,
+        "Width": 128,
+        "Height": 27,
+        "Name": "stack_bb",
+        "Value": "6.5",
+        "Layer": 997,
+        "HitRadius": 6,
+        "NotShow": false,
+        "Children": [],
+        "Color": "#FFFFFFFF"
+      },
+      {
+        "X": 517,
+        "Y": 55,
+        "Width": 40,
+        "Height": 63,
+        "Name": "cards1",
+        "Value": "3c",
+        "Layer": 993,
+        "HitRadius": 6,
+        "NotShow": false,
+        "Children": [],
+        "Color": "#FFFFFFFF"
+      },
+      {
+        "X": 563,
+        "Y": 54,
+        "Width": 36,
+        "Height": 67,
+        "Name": "cards2",
+        "Value": "2d",
+        "Layer": 992,
+        "HitRadius": 6,
+        "NotShow": false,
+        "Children": [],
+        "Color": "#FFFFFFFF"
+      },
+      {
+        "X": 97,
+        "Y": -481,
+        "Width": 0,
+        "Height": 0,
+        "Name": "action",
+        "Value": "Fold",
+        "Layer": 0,
+        "HitRadius": 6,
+        "NotShow": false,
+        "Children": [],
+        "Color": "#FFFFFFFF"
+      },
+      {
+        "X": 97,
+        "Y": -481,
+        "Width": 0,
+        "Height": 0,
+        "Name": "position",
+        "Value": "CO",
+        "Layer": 0,
+        "HitRadius": 6,
+        "NotShow": false,
+        "Children": [],
+        "Color": "#FFFFFFFF"
+      },
+      {
+        "X": 507,
+        "Y": 224,
+        "Width": 52,
+        "Height": 27,
+        "Name": "bet_bb",
+        "Value": "0.5",
+        "Layer": 997,
+        "HitRadius": 6,
+        "NotShow": false,
+        "Children": [],
+        "Color": "#FFFFFFFF"
+      },
+      {
+        "X": 597,
+        "Y": 195,
+        "Width": 26,
+        "Height": 24,
+        "Name": "is_dealer",
+        "Value": "true",
+        "Layer": 996,
+        "HitRadius": 6,
+        "NotShow": false,
+        "Children": [],
+        "Color": "#FFFFFFFF"
+      }
+    ],
+    "Color": "#FFFFFFFF"
+  },
+  {
+    "X": 718,
+    "Y": 76,
+    "Width": 131,
+    "Height": 159,
+    "Name": "Player5",
+    "Value": "UTG",
+    "Layer": 999,
+    "HitRadius": 6,
+    "NotShow": false,
+    "Children": [
+      {
+        "X": 719,
+        "Y": 181,
+        "Width": 125,
+        "Height": 22,
+        "Name": "nickname",
+        "Value": "Dmitry[B]",
+        "Layer": 998,
+        "HitRadius": 6,
+        "NotShow": false,
+        "Children": [],
+        "Color": "#FFFFFFFF"
+      },
+      {
+        "X": 718,
+        "Y": 204,
+        "Width": 128,
+        "Height": 27,
+        "Name": "stack_bb",
+        "Value": "6.5",
+        "Layer": 997,
+        "HitRadius": 6,
+        "NotShow": false,
+        "Children": [],
+        "Color": "#FFFFFFFF"
+      },
+      {
+        "X": 718,
+        "Y": 96,
+        "Width": 40,
+        "Height": 63,
+        "Name": "cards1",
+        "Value": "3c",
+        "Layer": 993,
+        "HitRadius": 6,
+        "NotShow": false,
+        "Children": [],
+        "Color": "#FFFFFFFF"
+      },
+      {
+        "X": 764,
+        "Y": 95,
+        "Width": 36,
+        "Height": 67,
+        "Name": "cards2",
+        "Value": "2d",
+        "Layer": 992,
+        "HitRadius": 6,
+        "NotShow": false,
+        "Children": [],
+        "Color": "#FFFFFFFF"
+      },
+      {
+        "X": 298,
+        "Y": -440,
+        "Width": 0,
+        "Height": 0,
+        "Name": "action",
+        "Value": "Fold",
+        "Layer": 0,
+        "HitRadius": 6,
+        "NotShow": false,
+        "Children": [],
+        "Color": "#FFFFFFFF"
+      },
+      {
+        "X": 298,
+        "Y": -440,
+        "Width": 0,
+        "Height": 0,
+        "Name": "position",
+        "Value": "CO",
+        "Layer": 0,
+        "HitRadius": 6,
+        "NotShow": false,
+        "Children": [],
+        "Color": "#FFFFFFFF"
+      },
+      {
+        "X": 702,
+        "Y": 263,
+        "Width": 63,
+        "Height": 27,
+        "Name": "bet_bb",
+        "Value": "0.5",
+        "Layer": 997,
+        "HitRadius": 6,
+        "NotShow": false,
+        "Children": [],
+        "Color": "#FFFFFFFF"
+      },
+      {
+        "X": 684,
+        "Y": 226,
+        "Width": 26,
+        "Height": 24,
+        "Name": "is_dealer",
+        "Value": "true",
+        "Layer": 996,
+        "HitRadius": 6,
+        "NotShow": false,
+        "Children": [],
+        "Color": "#FFFFFFFF"
+      }
+    ],
+    "Color": "#FFFFFFFF"
+  },
+  {
+    "X": 827,
+    "Y": 235,
+    "Width": 131,
+    "Height": 159,
+    "Name": "Player5",
+    "Value": "UTG",
+    "Layer": 999,
+    "HitRadius": 6,
+    "NotShow": false,
+    "Children": [
+      {
+        "X": 828,
+        "Y": 340,
+        "Width": 125,
+        "Height": 22,
+        "Name": "nickname",
+        "Value": "Dmitry[B]",
+        "Layer": 998,
+        "HitRadius": 6,
+        "NotShow": false,
+        "Children": [],
+        "Color": "#FFFFFFFF"
+      },
+      {
+        "X": 827,
+        "Y": 363,
+        "Width": 128,
+        "Height": 27,
+        "Name": "stack_bb",
+        "Value": "6.5",
+        "Layer": 997,
+        "HitRadius": 6,
+        "NotShow": false,
+        "Children": [],
+        "Color": "#FFFFFFFF"
+      },
+      {
+        "X": 827,
+        "Y": 255,
+        "Width": 40,
+        "Height": 63,
+        "Name": "cards1",
+        "Value": "3c",
+        "Layer": 993,
+        "HitRadius": 6,
+        "NotShow": false,
+        "Children": [],
+        "Color": "#FFFFFFFF"
+      },
+      {
+        "X": 873,
+        "Y": 254,
+        "Width": 36,
+        "Height": 67,
+        "Name": "cards2",
+        "Value": "2d",
+        "Layer": 992,
+        "HitRadius": 6,
+        "NotShow": false,
+        "Children": [],
+        "Color": "#FFFFFFFF"
+      },
+      {
+        "X": 407,
+        "Y": -281,
+        "Width": 0,
+        "Height": 0,
+        "Name": "action",
+        "Value": "Fold",
+        "Layer": 0,
+        "HitRadius": 6,
+        "NotShow": false,
+        "Children": [],
+        "Color": "#FFFFFFFF"
+      },
+      {
+        "X": 407,
+        "Y": -281,
+        "Width": 0,
+        "Height": 0,
+        "Name": "position",
+        "Value": "CO",
+        "Layer": 0,
+        "HitRadius": 6,
+        "NotShow": false,
+        "Children": [],
+        "Color": "#FFFFFFFF"
+      },
+      {
+        "X": 763,
+        "Y": 346,
+        "Width": 60,
+        "Height": 30,
+        "Name": "bet_bb",
+        "Value": "0.5",
+        "Layer": 997,
+        "HitRadius": 6,
+        "NotShow": false,
+        "Children": [],
+        "Color": "#FFFFFFFF"
+      },
+      {
+        "X": 798,
+        "Y": 300,
+        "Width": 26,
+        "Height": 24,
+        "Name": "is_dealer",
+        "Value": "true",
+        "Layer": 996,
+        "HitRadius": 6,
+        "NotShow": false,
+        "Children": [],
+        "Color": "#FFFFFFFF"
+      }
+    ],
+    "Color": "#FFFFFFFF"
+  },
+  {
+    "X": 703,
+    "Y": 411,
+    "Width": 131,
+    "Height": 159,
+    "Name": "Player5",
+    "Value": "UTG",
+    "Layer": 999,
+    "HitRadius": 6,
+    "NotShow": false,
+    "Children": [
+      {
+        "X": 704,
+        "Y": 516,
+        "Width": 125,
+        "Height": 22,
+        "Name": "nickname",
+        "Value": "Dmitry[B]",
+        "Layer": 998,
+        "HitRadius": 6,
+        "NotShow": false,
+        "Children": [],
+        "Color": "#FFFFFFFF"
+      },
+      {
+        "X": 703,
+        "Y": 539,
+        "Width": 128,
+        "Height": 27,
+        "Name": "stack_bb",
+        "Value": "6.5",
+        "Layer": 997,
+        "HitRadius": 6,
+        "NotShow": false,
+        "Children": [],
+        "Color": "#FFFFFFFF"
+      },
+      {
+        "X": 703,
+        "Y": 431,
+        "Width": 40,
+        "Height": 63,
+        "Name": "cards1",
+        "Value": "3c",
+        "Layer": 993,
+        "HitRadius": 6,
+        "NotShow": false,
+        "Children": [],
+        "Color": "#FFFFFFFF"
+      },
+      {
+        "X": 749,
+        "Y": 430,
+        "Width": 36,
+        "Height": 67,
+        "Name": "cards2",
+        "Value": "2d",
+        "Layer": 992,
+        "HitRadius": 6,
+        "NotShow": false,
+        "Children": [],
+        "Color": "#FFFFFFFF"
+      },
+      {
+        "X": 283,
+        "Y": -105,
+        "Width": 0,
+        "Height": 0,
+        "Name": "action",
+        "Value": "Fold",
+        "Layer": 0,
+        "HitRadius": 6,
+        "NotShow": false,
+        "Children": [],
+        "Color": "#FFFFFFFF"
+      },
+      {
+        "X": 283,
+        "Y": -105,
+        "Width": 0,
+        "Height": 0,
+        "Name": "position",
+        "Value": "CO",
+        "Layer": 0,
+        "HitRadius": 6,
+        "NotShow": false,
+        "Children": [],
+        "Color": "#FFFFFFFF"
+      },
+      {
+        "X": 632,
+        "Y": 429,
+        "Width": 60,
+        "Height": 30,
+        "Name": "bet_bb",
+        "Value": "0.5",
+        "Layer": 997,
+        "HitRadius": 6,
+        "NotShow": false,
+        "Children": [],
+        "Color": "#FFFFFFFF"
+      },
+      {
+        "X": 674,
+        "Y": 476,
+        "Width": 26,
+        "Height": 24,
+        "Name": "is_dealer",
+        "Value": "true",
+        "Layer": 996,
+        "HitRadius": 6,
+        "NotShow": false,
+        "Children": [],
+        "Color": "#FFFFFFFF"
+      }
+    ],
+    "Color": "#FFFFFFFF"
+  },
+  {
+    "X": 280,
+    "Y": 255,
     "Width": 406,
     "Height": 138,
     "Name": "table_status",
@@ -719,10 +1073,10 @@
     "NotShow": false,
     "Children": [
       {
-        "X": 511,
-        "Y": 258,
-        "Width": 72,
-        "Height": 20,
+        "X": 508,
+        "Y": 255,
+        "Width": 78,
+        "Height": 23,
         "Name": "total_bank_bb",
         "Value": "2.4",
         "Layer": 995,
@@ -732,8 +1086,8 @@
         "Color": "#FFFFFFFF"
       },
       {
-        "X": -1,
-        "Y": -11,
+        "X": 2,
+        "Y": -14,
         "Width": 0,
         "Height": 0,
         "Name": "stage",
@@ -745,8 +1099,8 @@
         "Color": "#FFFFFFFF"
       },
       {
-        "X": 282,
-        "Y": 284,
+        "X": 285,
+        "Y": 281,
         "Width": 74,
         "Height": 103,
         "Name": "card_table_1",
@@ -758,8 +1112,8 @@
         "Color": "#FFFFFFFF"
       },
       {
-        "X": 362,
-        "Y": 283,
+        "X": 365,
+        "Y": 280,
         "Width": 75,
         "Height": 104,
         "Name": "card_table_2",
@@ -771,8 +1125,8 @@
         "Color": "#FFFFFFFF"
       },
       {
-        "X": 445,
-        "Y": 281,
+        "X": 448,
+        "Y": 278,
         "Width": 75,
         "Height": 107,
         "Name": "card_table_3",
@@ -784,8 +1138,8 @@
         "Color": "#FFFFFFFF"
       },
       {
-        "X": 530,
-        "Y": 283,
+        "X": 533,
+        "Y": 280,
         "Width": 71,
         "Height": 105,
         "Name": "card_table_4",
@@ -797,8 +1151,8 @@
         "Color": "#FFFFFFFF"
       },
       {
-        "X": 611,
-        "Y": 281,
+        "X": 614,
+        "Y": 278,
         "Width": 70,
         "Height": 106,
         "Name": "card_table_5",

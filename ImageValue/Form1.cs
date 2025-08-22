@@ -21,7 +21,7 @@ namespace ImageValue
         private Rectangle currentNewRectangle;
         private RecToJson recToJson;
         private Point newStart; // ????? ??? ?? ????
-        
+
 
         public Main()
         {
@@ -41,15 +41,30 @@ namespace ImageValue
 
         private void DirButton_Click(object sender, EventArgs e)
         {
+            if (screen != null)
+            {
+                Array.Clear(screen, 0, screen.Length);
+            }
             if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
             {
-                screenDir = new DirectoryInfo(folderBrowserDialog1.SelectedPath);
-                screen = screenDir.GetFiles("*.png", SearchOption.AllDirectories);
-                NextPicture(1);
-                NextImgBtn.Enabled = true;
-                AddRec.Enabled = true;
-                SaveCfgBtn.Enabled = true;
-                LoadCfgBtn.Enabled = true;
+                try
+                {
+                    screenDir = new DirectoryInfo(folderBrowserDialog1.SelectedPath);
+                    screen = screenDir.GetFiles("*.png", SearchOption.AllDirectories);
+                    NextPicture(1);
+                    NextImgBtn.Enabled = true;
+                    AddRec.Enabled = true;
+                    SaveCfgBtn.Enabled = true;
+                    LoadCfgBtn.Enabled = true;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Â óêàçàííîì ïàïêå íåò èçîáðàæåíèé");
+                    NextImgBtn.Enabled = false;
+                    AddRec.Enabled = false;
+                    SaveCfgBtn.Enabled = false;
+                    LoadCfgBtn.Enabled = false;
+                }
             }
         }
 
@@ -57,7 +72,7 @@ namespace ImageValue
         {
             pictureIndex += index;
 
-            if (pictureIndex <= screen.Length && pictureIndex >= 0)
+            if (pictureIndex <= screen.Length - 1 && pictureIndex >= 0)
             {
                 var img = resize.ResizeBitmap(Image.FromFile(screen[pictureIndex].FullName), 970, 700);
                 pictureBox1.Image = img;
@@ -419,16 +434,20 @@ namespace ImageValue
 
         private void Add_Click(object sender, EventArgs e)
         {
-            if (rectObj != null)
+            var rect = new RecObj();
+            recValue.recObj = rect;
+            if (recValue.ShowDialog() == DialogResult.OK)
             {
-                var rect = new RecObj();
-                recValue.recObj = rect;
-                if (recValue.ShowDialog() == DialogResult.OK)
+                if (rectObj != null)
                 {
                     rectObj.AddChild(recValue.recObj);
-                    var roots = rectObjList.Where(x => x.Parent == null).ToList();
-                    FillTreeViewFromHierarchy(roots);
                 }
+                else
+                {
+                    rectObjList.Add(rect);
+                }
+                var roots = rectObjList.Where(x => x.Parent == null).ToList();
+                FillTreeViewFromHierarchy(roots);
             }
         }
 
@@ -463,7 +482,120 @@ namespace ImageValue
                 jsonDir = new DirectoryInfo(folderBrowserDialog1.SelectedPath);
                 SaveJsn.Enabled = true;
             }
-            
+
+        }
+
+        private void treeView1_ItemDrag(object sender, ItemDragEventArgs e)
+        {
+            var node = e.Item as TreeNode;
+            if (node == null) return;
+            // Запускаем перетаскивание самого RecObj
+            DoDragDrop(node, DragDropEffects.Move);
+        }
+
+        private void treeView1_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(typeof(TreeNode)))
+                e.Effect = DragDropEffects.Move;
+            else
+                e.Effect = DragDropEffects.None;
+        }
+
+        private void treeView1_DragOver(object sender, DragEventArgs e)
+        {
+            // Поддерживаем визуальную подсказку — вычисляем узел под курсором
+            Point pt = treeView1.PointToClient(new Point(e.X, e.Y));
+            TreeNode nodeUnder = treeView1.GetNodeAt(pt);
+            if (nodeUnder != null)
+            {
+                treeView1.SelectedNode = nodeUnder;
+                e.Effect = DragDropEffects.Move;
+            }
+            else
+            {
+                // Если отпускают в пустую область — это значит, делаем корневым
+                treeView1.SelectedNode = null;
+                e.Effect = DragDropEffects.Move;
+            }
+        }
+
+        private void treeView1_DragDrop(object sender, DragEventArgs e)
+        {
+            if (!e.Data.GetDataPresent(typeof(TreeNode))) return;
+            Point pt = treeView1.PointToClient(new Point(e.X, e.Y));
+            TreeNode nodeSource = e.Data.GetData(typeof(TreeNode)) as TreeNode;
+            TreeNode nodeTarget = treeView1.GetNodeAt(pt); // может быть null — тогда перенос в корень
+
+            if (nodeSource == null) return;
+
+            var srcRect = nodeSource.Tag as RecObj;
+            if (srcRect == null) return;
+
+            // Если перетаскиваем на самого себя или на потомка — запрещаем
+            if (nodeTarget != null)
+            {
+                var tgtRect = nodeTarget.Tag as RecObj;
+                if (tgtRect != null)
+                {
+                    // Проверяем, не является ли target потомком source (чтобы не создавать цикл)
+                    var p = tgtRect;
+                    while (p != null)
+                    {
+                        if (p == srcRect)
+                        {
+                            // нельзя переместить в своего потомка — просто выход
+                            return;
+                        }
+                        p = p.Parent;
+                    }
+                }
+            }
+
+            // Удаляем связь с прежним родителем (но не удаляем детей)
+            if (srcRect.Parent != null)
+            {
+                srcRect.Parent.Children.Remove(srcRect);
+                srcRect.Parent = null;
+            }
+
+            // Если был корневым — он находился в rectObjList; при переносе вниз (в дочерние) нужно удалить из rectObjList
+            if (rectObjList.Contains(srcRect))
+            {
+                // Если дропнули на узел (nodeTarget != null) — делаем дочерним
+                if (nodeTarget != null)
+                {
+                    rectObjList.Remove(srcRect);
+                }
+                else
+                {
+                    // дропнули в пустую область — остаётся корнем (ничего не делаем)
+                }
+            }
+
+            // Если цель — узел, то добавляем как ребёнка
+            if (nodeTarget != null)
+            {
+                var tgtRect = nodeTarget.Tag as RecObj;
+                if (tgtRect != null)
+                {
+                    tgtRect.AddChild(srcRect);
+                }
+            }
+            else
+            {
+                // Перенесли в корень TreeView (восстанавливаем в rectObjList)
+                if (!rectObjList.Contains(srcRect))
+                {
+                    rectObjList.Add(srcRect);
+                }
+                srcRect.Parent = null;
+            }
+
+            // Обновляем представление TreeView
+            var roots = rectObjList.Where(x => x.Parent == null).ToList();
+            FillTreeViewFromHierarchy(roots);
+
+            pictureBox1.Invalidate();
         }
     }
 }

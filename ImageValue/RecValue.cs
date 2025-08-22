@@ -22,6 +22,7 @@ namespace ImageValue
             recObj.Name = NameText.Text;
             recObj.Value = Value.Text;
             recObj.Color = ColorBtn.BackColor;
+            recObj.NotShow = NoShwBox.Checked;
             DialogResult = DialogResult.OK;
         }
 
@@ -29,6 +30,7 @@ namespace ImageValue
         {
             NameText.Text = recObj.Name;
             Value.Text = recObj.Value;
+            NoShwBox.Checked = recObj.NotShow;
             ColorBtn.ForeColor = recObj.Color;
         }
 

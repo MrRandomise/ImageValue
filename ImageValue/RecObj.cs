@@ -12,6 +12,8 @@ public class RecObj
     public string Value = "";
     public int Layer;
     public int HitRadius = 6;
+    public bool NotShow = false;
+
     // Иерархия: Parent не сериализуем, Children сериализуемы как обычный список
     [JsonIgnore]
     public RecObj Parent;

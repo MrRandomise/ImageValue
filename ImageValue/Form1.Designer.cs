@@ -67,6 +67,7 @@
             // 
             // treeView1
             // 
+            treeView1.AllowDrop = true;
             treeView1.ContextMenuStrip = contextMenuStrip1;
             treeView1.Dock = DockStyle.Top;
             treeView1.ImeMode = ImeMode.On;
@@ -74,8 +75,12 @@
             treeView1.Name = "treeView1";
             treeView1.Size = new Size(270, 319);
             treeView1.TabIndex = 0;
+            treeView1.ItemDrag += treeView1_ItemDrag;
             treeView1.AfterSelect += treeView1_AfterSelect;
             treeView1.NodeMouseDoubleClick += treeView1_NodeMouseDoubleClick;
+            treeView1.DragDrop += treeView1_DragDrop;
+            treeView1.DragEnter += treeView1_DragEnter;
+            treeView1.DragOver += treeView1_DragOver;
             // 
             // contextMenuStrip1
             // 

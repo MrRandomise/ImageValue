@@ -37,6 +37,7 @@
             NameText = new TextBox();
             colorDialog1 = new ColorDialog();
             ColorBtn = new Button();
+            NoShwBox = new CheckBox();
             SuspendLayout();
             // 
             // label1
@@ -111,11 +112,22 @@
             ColorBtn.UseVisualStyleBackColor = false;
             ColorBtn.Click += ColorBtn_Click;
             // 
+            // NoShwBox
+            // 
+            NoShwBox.AutoSize = true;
+            NoShwBox.Location = new Point(15, 225);
+            NoShwBox.Name = "NoShwBox";
+            NoShwBox.Size = new Size(110, 19);
+            NoShwBox.TabIndex = 9;
+            NoShwBox.Text = "Не отоброжать";
+            NoShwBox.UseVisualStyleBackColor = true;
+            // 
             // RecValue
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(233, 279);
+            Controls.Add(NoShwBox);
             Controls.Add(ColorBtn);
             Controls.Add(NameText);
             Controls.Add(Value);
@@ -145,5 +157,6 @@
         private TextBox NameText;
         private ColorDialog colorDialog1;
         private Button ColorBtn;
+        private CheckBox NoShwBox;
     }
 }
