@@ -1,4 +1,6 @@
 
+using YamlDotNet.Core;
+
 namespace ImageValue
 {
     public partial class Main : Form
@@ -20,8 +22,8 @@ namespace ImageValue
         private int activeCorner = -1;
         private Rectangle currentNewRectangle;
         private RecToJson recToJson;
-        private Point newStart; // ????? ??? ?? ????
-
+        private Point newStart;
+        private YamlManager manager = new YamlManager();
 
         public Main()
         {
@@ -455,11 +457,13 @@ namespace ImageValue
         {
             //// ?? ? ????? ???
             string imgPath = null;
+            string imgName = null;
             Size? imgSize = null;
             var jsonPath = Path.ChangeExtension(jsonDir + "\\" + screen[pictureIndex].Name, ".json");
             if (screen != null && pictureIndex >= 0 && pictureIndex < screen.Length)
             {
                 imgPath = screen[pictureIndex].FullName;
+                imgName = screen[pictureIndex].Name;
                 try
                 {
                     using (var img = Image.FromFile(imgPath))
@@ -472,7 +476,9 @@ namespace ImageValue
                     // ?? ? ???? ? ???? null
                 }
             }
-            recToJson.SaveToJson(jsonPath, rectObjList, imgPath, imgSize);
+            recToJson.SaveToJson(jsonPath, rectObjList, imgPath, imgName, imgSize);
+            manager.SaveOrUpdateNames(rectObjList, screenDir.FullName + "\\data.yaml");
+            recToJson.SaveToTxtYml(rectObjList, screenDir.FullName, imgName, imgSize);
         }
 
         private void LoadJsnDir_Click(object sender, EventArgs e)

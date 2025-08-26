@@ -1,10 +1,13 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Globalization;
 
 namespace ImageValue
 {
     public class RecToJson
     {
+        private YamlManager manager = new YamlManager();
+
         public void SaveToFile(string path, List<RecObj> list)
         {
             var roots = list.Where(r => r.Parent == null).ToList();
@@ -48,18 +51,18 @@ namespace ImageValue
             return flat;
         }
 
-        public void SaveToJson(string fileName, List<RecObj>rects, string imageFullPath, Size? imageSize = null)
+        public void SaveToJson(string fileName, List<RecObj> rects, string imageFullPath, string imgName, Size? imageSize)
         {
             if (fileName == null) throw new ArgumentNullException(nameof(fileName));
             if (imageFullPath == null) throw new ArgumentNullException(nameof(imageFullPath));
 
-            // Формируем итоговый список JSON-объектов (по вашему примеру — массив объектов)
+            // Формируем итоговый список JSON-объектов
             var rootArray = new JArray();
 
             // Первый объект: информация об изображении
             var imageObj = new JObject
             {
-                ["image_path"] = imageFullPath,
+                ["image_path"] = imgName,
                 ["image_size"] = new JObject
                 {
                     ["width"] = imageSize.Value.Width,
@@ -68,16 +71,40 @@ namespace ImageValue
             };
             rootArray.Add(imageObj);
 
-            // Последующие объекты: записи с id, label и опционально bbox
+            // --- НАЧАЛО ИЗМЕНЕНИЙ ---
+
+            // 1. Собираем все дочерние элементы в один набор для быстрой проверки.
+            var allChildren = new HashSet<RecObj>(rects.SelectMany(r => r.Children ?? new List<RecObj>()));
+
+            // 2. Отбираем только корневые элементы (те, что не являются ничьими детьми).
+            var rootRects = rects.Where(r => !allChildren.Contains(r)).ToList();
+
+            // 3. Передаем в обработку только корневые элементы.
+            var obj = RecObjToJToken(rootRects); // isRoot по умолчанию true, что здесь и нужно
+            rootArray.Add(obj);
+
+            // --- КОНЕЦ ИЗМЕНЕНИЙ ---
+
+            // Сериализация с отступами для читаемости
+            var json = rootArray.ToString(Formatting.Indented);
+
+            // Сохраняем в файл
+            File.WriteAllText(fileName, json);
+        }
+
+        private JObject RecObjToJToken(List<RecObj> rects)
+        {
+            var container = new JObject();
+            if (rects == null) return container;
+
             foreach (var r in rects)
             {
-                var obj = new JObject
-                {
-                    ["id"] = r.Name,
-                    ["label"] = r.Value ?? ""
-                };
+                var obj = new JObject();
 
-                // Добавляем bbox только если все координаты заданы (в вашем примере bbox отсутствует у некоторых)
+                if (!string.IsNullOrEmpty(r.Value))
+                {
+                    obj["label"] = r.Value;
+                }
                 if (r.X != 0 && r.Y != 0 && r.Width != 0 && r.Height != 0)
                 {
                     obj["bbox"] = new JObject
@@ -88,124 +115,45 @@ namespace ImageValue
                         ["h"] = r.Height
                     };
                 }
+                if (r.Children != null && r.Children.Count > 0)
+                {
+                    obj["items"] = RecObjToJToken(r.Children); // Рекурсия без флага
+                }
 
-                rootArray.Add(obj);
+                container[r.Name] = obj;
             }
 
-            // Сериализация с отступами для читаемости
-            var json = rootArray.ToString(Formatting.Indented);
-
-            // Сохраняем в файл
-            File.WriteAllText(fileName, json);
+            return container;
         }
 
-        private JObject RecObjToJObject(RecObj r, int id)
+        public void SaveToTxtYml(List<RecObj> rects, string path, string name, Size? imageSize = null)
         {
-            var jo = new JObject
+            var fullPath = path + "\\data.yaml";
+            name = Path.ChangeExtension(name, ".txt");
+            var file = path + "\\" + name;
+            
+            using (StreamWriter writer = new StreamWriter(file))
             {
-                ["id"] = id,
-                ["label"] = r.Name
-            };
+                foreach (var r in rects)
+                {
+                    if (r.X != 0 && r.Y != 0 && r.Width != 0 && r.Height != 0)
+                    {
+                        var id = manager.FindIdByNameInYaml(fullPath, r.Name);
+                        if (id != null)
+                        {
+                            MessageBox.Show($"{r.X.ToString()}, {r.Width.ToString()}, {r.Y.ToString()}, {r.Height.ToString()}, {imageSize.Value.Width.ToString()}, {imageSize.Value.Height.ToString()}");
+                            float x_center = (r.X + r.Width / 2.0f) / imageSize.Value.Width;
+                            float y_center = (r.Y + r.Height / 2.0f) / imageSize.Value.Height;
+                            float width_norm = (float)r.Width / imageSize.Value.Width;
+                            float height_norm = (float)r.Height / imageSize.Value.Height;
 
-            // parse role/fields from r.Value
-            string role = null;
-            JObject fieldsFromValue = null;
-            if (!string.IsNullOrWhiteSpace(r.Value))
-            {
-                try
-                {
-                    var parsed = JObject.Parse(r.Value);
-                    if (parsed.TryGetValue("role", out var roleTok))
-                    {
-                        role = roleTok.ToString();
-                        parsed.Remove("role");
-                    }
-                    fieldsFromValue = parsed;
-                }
-                catch
-                {
-                    var s = r.Value.Trim();
-                    if (s.StartsWith("role:", System.StringComparison.OrdinalIgnoreCase) || s.StartsWith("role=", System.StringComparison.OrdinalIgnoreCase))
-                    {
-                        var split = s.Split(new[] { ':', '=' }, 2);
-                        if (split.Length == 2) role = split[1].Trim();
+                            // Форматируем строку, используя CultureInfo.InvariantCulture для точки в качестве десятичного разделителя
+                            writer.WriteLine("{0} {1:F6} {2:F6} {3:F6} {4:F6}",
+                                id, x_center, y_center, width_norm, height_norm);
+                        }
                     }
                 }
             }
-            if (!string.IsNullOrEmpty(role))
-                jo["role"] = role;
-
-            // bbox
-            var bbox = new JObject();
-            if (r.X != 0) bbox["x"] = r.X;
-            if (r.Y != 0) bbox["y"] = r.Y;
-            if (r.Width != 0) bbox["w"] = r.Width;
-            if (r.Height != 0) bbox["h"] = r.Height;
-            if (bbox.HasValues)
-                jo["bbox"] = bbox;
-
-            // fields
-            var fields = new JObject();
-            if (fieldsFromValue != null)
-            {
-                foreach (var prop in fieldsFromValue.Properties())
-                {
-                    if (prop.Value.Type == JTokenType.Object)
-                    {
-                        var valObj = (JObject)prop.Value;
-                        var fjo = new JObject();
-
-                        if (valObj.TryGetValue("text", out var t) && t != null && t.Type != JTokenType.Null)
-                        {
-                            var ts = t.Type == JTokenType.String ? t.ToString().Trim() : t;
-                            if (!string.IsNullOrEmpty(ts.ToString()))
-                                fjo["text"] = t;
-                        }
-
-                        if (valObj.TryGetValue("bbox", out var bbTok) && bbTok != null && bbTok.Type == JTokenType.Object)
-                        {
-                            var bb = (JObject)bbTok;
-                            var bbOut = new JObject();
-                            if (bb.TryGetValue("x", out var bx) && bx != null && bx.Type == JTokenType.Integer && bx.Value<int>() != 0)
-                                bbOut["x"] = bx;
-                            if (bb.TryGetValue("y", out var by) && by != null && by.Type == JTokenType.Integer && by.Value<int>() != 0)
-                                bbOut["y"] = by;
-                            if (bb.TryGetValue("w", out var bw) && bw != null && bw.Type == JTokenType.Integer && bw.Value<int>() != 0)
-                                bbOut["w"] = bw;
-                            if (bb.TryGetValue("h", out var bh) && bh != null && bh.Type == JTokenType.Integer && bh.Value<int>() != 0)
-                                bbOut["h"] = bh;
-                            if (bbOut.HasValues) fjo["bbox"] = bbOut;
-                        }
-
-                        if (fjo.HasValues)
-                            fields[prop.Name] = fjo;
-                    }
-                    else
-                    {
-                        var v = prop.Value;
-                        bool add = false;
-                        if (v.Type == JTokenType.Integer || v.Type == JTokenType.Float)
-                        {
-                            add = v.Value<double>() != 0.0;
-                        }
-                        else if (v.Type == JTokenType.String)
-                        {
-                            add = !string.IsNullOrWhiteSpace(v.ToString());
-                        }
-                        else
-                        {
-                            add = true;
-                        }
-
-                        if (add) fields[prop.Name] = v;
-                    }
-                }
-            }
-
-            if (fields.HasValues)
-                jo["fields"] = fields;
-
-            return jo;
         }
-}
+    }
 }
