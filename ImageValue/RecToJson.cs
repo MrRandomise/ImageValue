@@ -1,6 +1,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using System.Globalization;
+using System.Collections.Generic;
+
 
 namespace ImageValue
 {
@@ -131,7 +132,7 @@ namespace ImageValue
             var fullPath = path + "\\data.yaml";
             name = Path.ChangeExtension(name, ".txt");
             var file = path + "\\" + name;
-            
+
             using (StreamWriter writer = new StreamWriter(file))
             {
                 foreach (var r in rects)
@@ -141,7 +142,6 @@ namespace ImageValue
                         var id = manager.FindIdByNameInYaml(fullPath, r.Name);
                         if (id != null)
                         {
-                            MessageBox.Show($"{r.X.ToString()}, {r.Width.ToString()}, {r.Y.ToString()}, {r.Height.ToString()}, {imageSize.Value.Width.ToString()}, {imageSize.Value.Height.ToString()}");
                             float x_center = (r.X + r.Width / 2.0f) / imageSize.Value.Width;
                             float y_center = (r.Y + r.Height / 2.0f) / imageSize.Value.Height;
                             float width_norm = (float)r.Width / imageSize.Value.Width;
@@ -154,6 +154,51 @@ namespace ImageValue
                     }
                 }
             }
+        }
+        public List<RecObj> LoadFromCustomJson(string path)
+        {
+            if (!File.Exists(path)) return new List<RecObj>();
+            var text = File.ReadAllText(path);
+            JArray arr;
+            try { arr = JArray.Parse(text); } catch { return new List<RecObj>(); }
+            if (arr.Count < 2) return new List<RecObj>();
+            var rootObj = arr[1] as JObject;
+            if (rootObj == null) return new List<RecObj>();
+            var roots = new List<RecObj>();
+            var flat = new List<RecObj>();
+
+            void ParseJObject(JObject j, RecObj parent)
+            {
+                foreach (var prop in j.Properties())
+                {
+                    if (!(prop.Value is JObject val)) continue;
+                    var node = new RecObj();
+                    node.Name = prop.Name;
+                    if (val["bbox"] is JObject bb)
+                    {
+                        node.X = bb["x"]?.Value<int>() ?? 0;
+                        node.Y = bb["y"]?.Value<int>() ?? 0;
+                        node.Width = bb["w"]?.Value<int>() ?? 0;
+                        node.Height = bb["h"]?.Value<int>() ?? 0;
+                    }
+                    if (val["label"] != null) node.Value = val["label"].Value<string>();
+                    node.Parent = parent;
+                    if (parent != null) parent.Children.Add(node);
+                    else roots.Add(node);
+                    flat.Add(node);
+
+                    if (val["items"] is JObject itemsObj)
+                    {
+                        ParseJObject(itemsObj, node);
+                    }
+                }
+            }
+
+            ParseJObject(rootObj, null);
+
+            // Примечание: при создании детей мы уже добавляем их в parent.Children,
+            // но flat содержит все созданные объекты.
+            return flat;
         }
     }
 }

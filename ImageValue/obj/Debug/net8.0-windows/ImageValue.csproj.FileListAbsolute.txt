@@ -42,3 +42,5 @@ D:\Programm\Poker\ImageValue\ImageValue\obj\Debug\net8.0-windows\ImageValue.pdb
 D:\Programm\Poker\ImageValue\ImageValue\obj\Debug\net8.0-windows\ImageValue.genruntimeconfig.cache
 D:\Programm\Poker\ImageValue\ImageValue\obj\Debug\net8.0-windows\ref\ImageValue.dll
 D:\Programm\Poker\ImageValue\ImageValue\bin\Debug\net8.0-windows\YamlDotNet.dll
+E:\Programming\ImageValue\ImageValue\bin\Debug\net8.0-windows\YamlDotNet.dll
+E:\Programming\ImageValue\ImageValue\obj\Debug\net8.0-windows\ImageValue.sourcelink.json

@@ -24,6 +24,7 @@ namespace ImageValue
         private RecToJson recToJson;
         private Point newStart;
         private YamlManager manager = new YamlManager();
+        private string JsonConfig; 
 
         public Main()
         {
@@ -79,6 +80,23 @@ namespace ImageValue
                 var img = resize.ResizeBitmap(Image.FromFile(screen[pictureIndex].FullName), 970, 700);
                 pictureBox1.Image = img;
                 image = pictureBox1.Image;
+                var jsonPath = Path.ChangeExtension(jsonDir + "\\" + screen[pictureIndex].Name, ".json");
+                if (File.Exists(jsonPath))
+                {
+                    rectObjList.Clear();
+                    var text = File.ReadAllText(jsonPath);
+                    rectObjList = recToJson.LoadFromCustomJson(jsonPath);
+                    var roots = rectObjList.Where(x => x.Parent == null).ToList();
+                    FillTreeViewFromHierarchy(roots);
+                }
+                else if (JsonConfig != null)
+                {
+                    loadJsonConfig();
+                }
+                else
+                {
+                    rectObjList.Clear();
+                }
                 pictureBox1.Invalidate();
             }
         }
@@ -293,12 +311,18 @@ namespace ImageValue
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                rectObjList.Clear();
-                rectObjList = recToJson.LoadFromFile(openFileDialog1.FileName);
-                pictureBox1.Invalidate();
-                var roots = rectObjList.Where(x => x.Parent == null).ToList();
-                FillTreeViewFromHierarchy(roots);
+                JsonConfig = openFileDialog1.FileName;
+                loadJsonConfig();
             }
+        }
+
+        private void loadJsonConfig()
+        {
+            rectObjList.Clear();
+            rectObjList = recToJson.LoadFromFile(JsonConfig);
+            pictureBox1.Invalidate();
+            var roots = rectObjList.Where(x => x.Parent == null).ToList();
+            FillTreeViewFromHierarchy(roots);
         }
         private void Main_KeyDown(object sender, KeyEventArgs e)
         {
