@@ -90,6 +90,7 @@ namespace ImageValue
                 image = pictureBox1.Image;
                 var jsonPath = Path.ChangeExtension(jsonDir + "\\" + screen[pictureIndex].Name, ".json");
                 ImgCnt.Text = pictureIndex.ToString();
+                Text = "Value Image - " + screen[pictureIndex].Name;
                 if (File.Exists(jsonPath))
                 {
                     rectObjList.Clear();
