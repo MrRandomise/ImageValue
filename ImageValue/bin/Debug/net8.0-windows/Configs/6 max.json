@@ -154,6 +154,19 @@
         "NotShow": false,
         "Children": [],
         "Color": "#FFFFFFFF"
+      },
+      {
+        "X": 200,
+        "Y": 455,
+        "Width": 36,
+        "Height": 34,
+        "Name": "Player5Dealer",
+        "Value": "",
+        "Layer": 855,
+        "HitRadius": 6,
+        "NotShow": false,
+        "Children": [],
+        "Color": "#FFFFFFFF"
       }
     ],
     "Color": "#FFFFFFFF"
@@ -196,10 +209,10 @@
         "Color": "#FFFFFFFF"
       },
       {
-        "X": 188,
-        "Y": 272,
-        "Width": 50,
-        "Height": 28,
+        "X": 230,
+        "Y": 253,
+        "Width": 55,
+        "Height": 29,
         "Name": "Player3Bet",
         "Value": "",
         "Layer": 949,
@@ -280,7 +293,7 @@
         "Y": 138,
         "Width": 131,
         "Height": 24,
-        "Name": "Player7Nick",
+        "Name": "Player4Nick",
         "Value": "",
         "Layer": 998,
         "HitRadius": 6,
@@ -293,7 +306,7 @@
         "Y": 162,
         "Width": 105,
         "Height": 27,
-        "Name": "Player7Stack",
+        "Name": "Player4Stack",
         "Value": "",
         "Layer": 997,
         "HitRadius": 6,
@@ -302,8 +315,8 @@
         "Color": "#FFFFFFFF"
       },
       {
-        "X": 483,
-        "Y": 197,
+        "X": 424,
+        "Y": 189,
         "Width": 38,
         "Height": 33,
         "Name": "Player4Dealer",
@@ -315,13 +328,26 @@
         "Color": "#FFFFFFFF"
       },
       {
-        "X": 370,
-        "Y": 202,
+        "X": 454,
+        "Y": 221,
         "Width": 71,
         "Height": 28,
         "Name": "Player4Bet",
         "Value": "",
         "Layer": 940,
+        "HitRadius": 6,
+        "NotShow": false,
+        "Children": [],
+        "Color": "#FFFFFFFF"
+      },
+      {
+        "X": 422,
+        "Y": 57,
+        "Width": 126,
+        "Height": 60,
+        "Name": "Player4Cards",
+        "Value": "",
+        "Layer": 880,
         "HitRadius": 6,
         "NotShow": false,
         "Children": [],
@@ -346,7 +372,7 @@
         "Y": 204,
         "Width": 131,
         "Height": 24,
-        "Name": "Player8Nick",
+        "Name": "Player5Nick",
         "Value": "",
         "Layer": 998,
         "HitRadius": 6,
@@ -359,7 +385,7 @@
         "Y": 228,
         "Width": 105,
         "Height": 27,
-        "Name": "Player8Stack",
+        "Name": "Player5Stack",
         "Value": "",
         "Layer": 997,
         "HitRadius": 6,
@@ -408,8 +434,8 @@
         "Color": "#FFFFFFFF"
       },
       {
-        "X": 675,
-        "Y": 140,
+        "X": 684,
+        "Y": 252,
         "Width": 64,
         "Height": 31,
         "Name": "Player5Bet",
@@ -421,8 +447,8 @@
         "Color": "#FFFFFFFF"
       },
       {
-        "X": 732,
-        "Y": 229,
+        "X": 711,
+        "Y": 185,
         "Width": 35,
         "Height": 32,
         "Name": "Player5Dealer",
@@ -570,7 +596,7 @@
         "Y": 488,
         "Width": 131,
         "Height": 24,
-        "Name": "Player8Nick",
+        "Name": "Player6Nick",
         "Value": "",
         "Layer": 998,
         "HitRadius": 6,
@@ -583,7 +609,7 @@
         "Y": 512,
         "Width": 105,
         "Height": 27,
-        "Name": "Player8Stack",
+        "Name": "Player6Stack",
         "Value": "",
         "Layer": 997,
         "HitRadius": 6,
@@ -632,8 +658,8 @@
         "Color": "#FFFFFFFF"
       },
       {
-        "X": 704,
-        "Y": 424,
+        "X": 714,
+        "Y": 425,
         "Width": 64,
         "Height": 31,
         "Name": "Player5Bet",

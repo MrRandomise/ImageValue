@@ -1,45 +1,45 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\Programming\\ImageValue\\",
+  "WorkspaceRootPath": "D:\\Programm\\Poker\\ImageValue\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|e:\\programming\\imagevalue\\imagevalue\\renderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|solutionrelative:imagevalue\\renderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|e:\\programming\\imagevalue\\imagevalue\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|d:\\programm\\poker\\imagevalue\\imagevalue\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|solutionrelative:imagevalue\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|e:\\programming\\imagevalue\\imagevalue\\rectojson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|solutionrelative:imagevalue\\rectojson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|E:\\Programming\\ImageValue\\imagevalue\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|D:\\Programm\\Poker\\ImageValue\\imagevalue\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|solutionrelative:imagevalue\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|e:\\programming\\imagevalue\\imagevalue\\yamlmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|solutionrelative:imagevalue\\yamlmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|e:\\programming\\imagevalue\\imagevalue\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|d:\\programm\\poker\\imagevalue\\imagevalue\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|solutionrelative:imagevalue\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|e:\\programming\\imagevalue\\imagevalue\\recvalue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|d:\\programm\\poker\\imagevalue\\imagevalue\\renderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|solutionrelative:imagevalue\\renderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|d:\\programm\\poker\\imagevalue\\imagevalue\\rectojson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|solutionrelative:imagevalue\\rectojson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|d:\\programm\\poker\\imagevalue\\imagevalue\\yamlmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|solutionrelative:imagevalue\\yamlmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|d:\\programm\\poker\\imagevalue\\imagevalue\\recvalue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|solutionrelative:imagevalue\\recvalue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|e:\\programming\\imagevalue\\imagevalue\\recobj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|d:\\programm\\poker\\imagevalue\\imagevalue\\recobj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|solutionrelative:imagevalue\\recobj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|E:\\Programming\\ImageValue\\imagevalue\\recvalue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|D:\\Programm\\Poker\\ImageValue\\imagevalue\\recvalue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|solutionrelative:imagevalue\\recvalue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|e:\\programming\\imagevalue\\imagevalue\\resizeimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|d:\\programm\\poker\\imagevalue\\imagevalue\\resizeimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|solutionrelative:imagevalue\\resizeimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -50,17 +50,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Form1.cs",
-              "DocumentMoniker": "E:\\Programming\\ImageValue\\ImageValue\\Form1.cs",
+              "DocumentMoniker": "D:\\Programm\\Poker\\ImageValue\\ImageValue\\Form1.cs",
               "RelativeDocumentMoniker": "ImageValue\\Form1.cs",
-              "ToolTip": "E:\\Programming\\ImageValue\\ImageValue\\Form1.cs",
+              "ToolTip": "D:\\Programm\\Poker\\ImageValue\\ImageValue\\Form1.cs",
               "RelativeToolTip": "ImageValue\\Form1.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAowGMAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAHgCAAAAAAAAAAAAAJACAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-19T10:59:59.76Z",
               "IsPinned": true,
@@ -68,78 +68,76 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Bookmark",
               "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "YamlManager.cs",
-              "DocumentMoniker": "E:\\Programming\\ImageValue\\ImageValue\\YamlManager.cs",
-              "RelativeDocumentMoniker": "ImageValue\\YamlManager.cs",
-              "ToolTip": "E:\\Programming\\ImageValue\\ImageValue\\YamlManager.cs",
-              "RelativeToolTip": "ImageValue\\YamlManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGYAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T01:41:06.891Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "YamlManager.cs",
+              "DocumentMoniker": "D:\\Programm\\Poker\\ImageValue\\ImageValue\\YamlManager.cs",
+              "RelativeDocumentMoniker": "ImageValue\\YamlManager.cs",
+              "ToolTip": "D:\\Programm\\Poker\\ImageValue\\ImageValue\\YamlManager.cs",
+              "RelativeToolTip": "ImageValue\\YamlManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGYAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T01:41:06.891Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "E:\\Programming\\ImageValue\\ImageValue\\Form1.Designer.cs",
+              "DocumentMoniker": "D:\\Programm\\Poker\\ImageValue\\ImageValue\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "ImageValue\\Form1.Designer.cs",
-              "ToolTip": "E:\\Programming\\ImageValue\\ImageValue\\Form1.Designer.cs",
+              "ToolTip": "D:\\Programm\\Poker\\ImageValue\\ImageValue\\Form1.Designer.cs",
               "RelativeToolTip": "ImageValue\\Form1.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-20T14:01:37.726Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "RecToJson.cs",
-              "DocumentMoniker": "E:\\Programming\\ImageValue\\ImageValue\\RecToJson.cs",
+              "DocumentMoniker": "D:\\Programm\\Poker\\ImageValue\\ImageValue\\RecToJson.cs",
               "RelativeDocumentMoniker": "ImageValue\\RecToJson.cs",
-              "ToolTip": "E:\\Programming\\ImageValue\\ImageValue\\RecToJson.cs",
+              "ToolTip": "D:\\Programm\\Poker\\ImageValue\\ImageValue\\RecToJson.cs",
               "RelativeToolTip": "ImageValue\\RecToJson.cs",
               "ViewState": "AgIAACgAAAAAAAAAAAAAwEEAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T13:02:08.629Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-20T13:02:08.629Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "E:\\Programming\\ImageValue\\ImageValue\\Form1.cs",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "DocumentMoniker": "D:\\Programm\\Poker\\ImageValue\\ImageValue\\Form1.cs",
               "RelativeDocumentMoniker": "ImageValue\\Form1.cs",
-              "ToolTip": "E:\\Programming\\ImageValue\\ImageValue\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "ImageValue\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "ToolTip": "D:\\Programm\\Poker\\ImageValue\\ImageValue\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "RelativeToolTip": "ImageValue\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-19T16:26:20.456Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "RecValue.cs",
-              "DocumentMoniker": "E:\\Programming\\ImageValue\\ImageValue\\RecValue.cs",
+              "DocumentMoniker": "D:\\Programm\\Poker\\ImageValue\\ImageValue\\RecValue.cs",
               "RelativeDocumentMoniker": "ImageValue\\RecValue.cs",
-              "ToolTip": "E:\\Programming\\ImageValue\\ImageValue\\RecValue.cs",
+              "ToolTip": "D:\\Programm\\Poker\\ImageValue\\ImageValue\\RecValue.cs",
               "RelativeToolTip": "ImageValue\\RecValue.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -148,13 +146,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Renderer.cs",
-              "DocumentMoniker": "E:\\Programming\\ImageValue\\ImageValue\\Renderer.cs",
+              "DocumentMoniker": "D:\\Programm\\Poker\\ImageValue\\ImageValue\\Renderer.cs",
               "RelativeDocumentMoniker": "ImageValue\\Renderer.cs",
-              "ToolTip": "E:\\Programming\\ImageValue\\ImageValue\\Renderer.cs",
+              "ToolTip": "D:\\Programm\\Poker\\ImageValue\\ImageValue\\Renderer.cs",
               "RelativeToolTip": "ImageValue\\Renderer.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAA1wC0AAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwDIAAABaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-19T16:29:58.373Z",
               "EditorCaption": ""
@@ -163,9 +161,10 @@
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "RecValue.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
-              "DocumentMoniker": "E:\\Programming\\ImageValue\\ImageValue\\RecValue.cs",
+              "DocumentMoniker": "D:\\Programm\\Poker\\ImageValue\\ImageValue\\RecValue.cs",
               "RelativeDocumentMoniker": "ImageValue\\RecValue.cs",
               "ToolTip": "D:\\Programm\\Poker\\ImageValue\\ImageValue\\RecValue.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "RelativeToolTip": "ImageValue\\RecValue.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-19T16:17:13.339Z"
             },
@@ -173,9 +172,9 @@
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "RecObj.cs",
-              "DocumentMoniker": "E:\\Programming\\ImageValue\\ImageValue\\RecObj.cs",
+              "DocumentMoniker": "D:\\Programm\\Poker\\ImageValue\\ImageValue\\RecObj.cs",
               "RelativeDocumentMoniker": "ImageValue\\RecObj.cs",
-              "ToolTip": "E:\\Programming\\ImageValue\\ImageValue\\RecObj.cs",
+              "ToolTip": "D:\\Programm\\Poker\\ImageValue\\ImageValue\\RecObj.cs",
               "RelativeToolTip": "ImageValue\\RecObj.cs",
               "ViewState": "AgIAAK0AAAAAAAAAAAAcwN0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -185,9 +184,9 @@
               "$type": "Document",
               "DocumentIndex": 9,
               "Title": "ResizeImage.cs",
-              "DocumentMoniker": "E:\\Programming\\ImageValue\\ImageValue\\ResizeImage.cs",
+              "DocumentMoniker": "D:\\Programm\\Poker\\ImageValue\\ImageValue\\ResizeImage.cs",
               "RelativeDocumentMoniker": "ImageValue\\ResizeImage.cs",
-              "ToolTip": "E:\\Programming\\ImageValue\\ImageValue\\ResizeImage.cs",
+              "ToolTip": "D:\\Programm\\Poker\\ImageValue\\ImageValue\\ResizeImage.cs",
               "RelativeToolTip": "ImageValue\\ResizeImage.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

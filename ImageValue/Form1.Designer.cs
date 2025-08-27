@@ -31,6 +31,10 @@
             components = new System.ComponentModel.Container();
             colorDialog1 = new ColorDialog();
             LayerPanel = new Panel();
+            LoadImgCnt = new Button();
+            label2 = new Label();
+            ImgCnt = new TextBox();
+            label1 = new Label();
             treeView1 = new TreeView();
             contextMenuStrip1 = new ContextMenuStrip(components);
             Add = new ToolStripMenuItem();
@@ -58,12 +62,55 @@
             // LayerPanel
             // 
             LayerPanel.BorderStyle = BorderStyle.Fixed3D;
+            LayerPanel.Controls.Add(LoadImgCnt);
+            LayerPanel.Controls.Add(label2);
+            LayerPanel.Controls.Add(ImgCnt);
+            LayerPanel.Controls.Add(label1);
             LayerPanel.Controls.Add(treeView1);
             LayerPanel.Dock = DockStyle.Right;
             LayerPanel.Location = new Point(1239, 0);
             LayerPanel.Name = "LayerPanel";
             LayerPanel.Size = new Size(274, 709);
             LayerPanel.TabIndex = 1;
+            // 
+            // LoadImgCnt
+            // 
+            LoadImgCnt.Enabled = false;
+            LoadImgCnt.Location = new Point(19, 636);
+            LoadImgCnt.Name = "LoadImgCnt";
+            LoadImgCnt.Size = new Size(168, 32);
+            LoadImgCnt.TabIndex = 4;
+            LoadImgCnt.Text = "Загрузить";
+            LoadImgCnt.UseVisualStyleBackColor = true;
+            LoadImgCnt.Click += LoadImgCnt_Click;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(159, 595);
+            label2.Name = "label2";
+            label2.Size = new Size(28, 15);
+            label2.TabIndex = 3;
+            label2.Text = "из 0";
+            // 
+            // ImgCnt
+            // 
+            ImgCnt.Enabled = false;
+            ImgCnt.Location = new Point(19, 592);
+            ImgCnt.Name = "ImgCnt";
+            ImgCnt.Size = new Size(134, 23);
+            ImgCnt.TabIndex = 2;
+            ImgCnt.TextChanged += ImgCnt_TextChanged;
+            ImgCnt.KeyPress += ImgCnt_KeyPress;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(19, 574);
+            label1.Name = "label1";
+            label1.Size = new Size(134, 15);
+            label1.TabIndex = 1;
+            label1.Text = "Открыть изображение:";
             // 
             // treeView1
             // 
@@ -244,6 +291,7 @@
             Text = "Value Image";
             KeyDown += Main_KeyDown;
             LayerPanel.ResumeLayout(false);
+            LayerPanel.PerformLayout();
             contextMenuStrip1.ResumeLayout(false);
             SettingPanel.ResumeLayout(false);
             panel1.ResumeLayout(false);
@@ -272,5 +320,9 @@
         private ToolStripMenuItem Add;
         private Button SaveJsn;
         private Button LoadJsnDir;
+        private Button LoadImgCnt;
+        private Label label2;
+        private TextBox ImgCnt;
+        private Label label1;
     }
 }

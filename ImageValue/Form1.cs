@@ -1,4 +1,5 @@
 
+using System;
 using YamlDotNet.Core;
 
 namespace ImageValue
@@ -24,7 +25,7 @@ namespace ImageValue
         private RecToJson recToJson;
         private Point newStart;
         private YamlManager manager = new YamlManager();
-        private string JsonConfig; 
+        private string JsonConfig;
 
         public Main()
         {
@@ -59,6 +60,9 @@ namespace ImageValue
                     AddRec.Enabled = true;
                     SaveCfgBtn.Enabled = true;
                     LoadCfgBtn.Enabled = true;
+                    ImgCnt.Enabled = true;
+                    LoadImgCnt.Enabled = true;
+                    label2.Text = "из " + screen.Count().ToString();
                 }
                 catch (Exception ex)
                 {
@@ -71,9 +75,13 @@ namespace ImageValue
             }
         }
 
-        private void NextPicture(int index)
+        private void NextPicture(int index, bool changeIndex = false)
         {
-            pictureIndex += index;
+            if(!changeIndex)
+            {
+                pictureIndex += index;
+            }
+            
 
             if (pictureIndex <= screen.Length - 1 && pictureIndex >= 0)
             {
@@ -81,13 +89,12 @@ namespace ImageValue
                 pictureBox1.Image = img;
                 image = pictureBox1.Image;
                 var jsonPath = Path.ChangeExtension(jsonDir + "\\" + screen[pictureIndex].Name, ".json");
+                ImgCnt.Text = pictureIndex.ToString();
                 if (File.Exists(jsonPath))
                 {
                     rectObjList.Clear();
                     var text = File.ReadAllText(jsonPath);
                     rectObjList = recToJson.LoadFromCustomJson(jsonPath);
-                    var roots = rectObjList.Where(x => x.Parent == null).ToList();
-                    FillTreeViewFromHierarchy(roots);
                 }
                 else if (JsonConfig != null)
                 {
@@ -97,6 +104,8 @@ namespace ImageValue
                 {
                     rectObjList.Clear();
                 }
+                var roots = rectObjList.Where(x => x.Parent == null).ToList();
+                FillTreeViewFromHierarchy(roots);
                 pictureBox1.Invalidate();
             }
         }
@@ -626,6 +635,62 @@ namespace ImageValue
             FillTreeViewFromHierarchy(roots);
 
             pictureBox1.Invalidate();
+        }
+
+        private void ImgCnt_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (int.Parse(ImgCnt.Text) <= 0)
+                {
+                    ImgCnt.Text = "1";
+                    PrevImgBtn.Enabled = false;
+                    NextImgBtn.Enabled = true;
+                }
+                if (int.Parse(ImgCnt.Text) > screen.Count())
+                {
+                    var i = screen.Count() - 1;
+                    ImgCnt.Text = i.ToString();
+                    NextImgBtn.Enabled = false;
+                    PrevImgBtn.Enabled = true;
+                }
+                if(int.Parse(ImgCnt.Text) > 1)
+                {
+                    PrevImgBtn.Enabled = true;
+                }
+                if (int.Parse(ImgCnt.Text) < screen.Count())
+                {
+                    NextImgBtn.Enabled = true;
+                }
+            }
+            catch
+            {
+                ImgCnt.Text = "1";
+                PrevImgBtn.Enabled = false;
+                NextImgBtn.Enabled = true;
+            }
+        }
+
+        private void ImgCnt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '-' && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true; // Запрещаем ввод  
+            }
+        }
+
+        private void LoadImgCnt_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                pictureIndex = int.Parse(ImgCnt.Text);
+                NextPicture(pictureIndex, true);
+            }
+            catch
+            {
+                pictureIndex = 1;
+                NextPicture(pictureIndex, true);
+            }
         }
     }
 }
