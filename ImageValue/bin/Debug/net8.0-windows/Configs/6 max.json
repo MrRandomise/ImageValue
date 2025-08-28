@@ -572,13 +572,13 @@
     "Y": 2,
     "Width": 298,
     "Height": 28,
-    "Name": "Rectangle",
+    "Name": "Title",
     "Value": "",
     "Layer": 943,
     "HitRadius": 6,
     "NotShow": false,
     "Children": [],
-    "Color": "#FF008000"
+    "Color": "#FFFFFFFF"
   },
   {
     "X": 796,
