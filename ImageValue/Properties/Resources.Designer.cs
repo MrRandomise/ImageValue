@@ -63,6 +63,16 @@ namespace ImageValue.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap card_2_upscaled {
+            get {
+                object obj = ResourceManager.GetObject("card_2_upscaled", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Home_screenshot_2 {
             get {
                 object obj = ResourceManager.GetObject("Home-screenshot_2", resourceCulture);

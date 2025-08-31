@@ -9,7 +9,7 @@ namespace ImageValue
     {
         private YamlManager manager = new YamlManager();
 
-        public void SaveToFile(string path, List<RecObj> list)
+        public void SaveConfigFile(string path, List<RecObj> list)
         {
             var roots = list.Where(r => r.Parent == null).ToList();
 
@@ -22,7 +22,7 @@ namespace ImageValue
             File.WriteAllText(path, json);
         }
 
-        public List<RecObj> LoadFromFile(string path)
+        public List<RecObj> LoadConfigFile(string path)
         {
             if (!File.Exists(path)) return new List<RecObj>();
             var json = File.ReadAllText(path);
@@ -51,6 +51,7 @@ namespace ImageValue
             foreach (var r in roots) Flatten(r);
             return flat;
         }
+
 
         public void SaveToJson(string fileName, List<RecObj> rects, string imageFullPath, string imgName, Size? imageSize)
         {

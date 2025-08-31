@@ -215,13 +215,13 @@
     "Y": 2,
     "Width": 298,
     "Height": 28,
-    "Name": "Rectangle",
+    "Name": "Title",
     "Value": "",
     "Layer": 943,
     "HitRadius": 6,
     "NotShow": false,
     "Children": [],
-    "Color": "#FF008000"
+    "Color": "#FFFFFFFF"
   },
   {
     "X": 134,
@@ -1069,6 +1069,45 @@
         "Color": "#FFFFFFFF"
       }
     ],
+    "Color": "#FFFFFFFF"
+  },
+  {
+    "X": 594,
+    "Y": 619,
+    "Width": 99,
+    "Height": 50,
+    "Name": "FoldButton",
+    "Value": "",
+    "Layer": 995,
+    "HitRadius": 6,
+    "NotShow": false,
+    "Children": [],
+    "Color": "#FFFFFFFF"
+  },
+  {
+    "X": 725,
+    "Y": 618,
+    "Width": 86,
+    "Height": 50,
+    "Name": "CallButton",
+    "Value": "",
+    "Layer": 994,
+    "HitRadius": 6,
+    "NotShow": false,
+    "Children": [],
+    "Color": "#FFFFFFFF"
+  },
+  {
+    "X": 853,
+    "Y": 622,
+    "Width": 87,
+    "Height": 44,
+    "Name": "RaiseButton",
+    "Value": "",
+    "Layer": 993,
+    "HitRadius": 6,
+    "NotShow": false,
+    "Children": [],
     "Color": "#FFFFFFFF"
   }
 ]

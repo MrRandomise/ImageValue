@@ -26,6 +26,7 @@ namespace ImageValue
         private Point newStart;
         private YamlManager manager = new YamlManager();
         private string JsonConfig;
+        private SearchClass search;
 
         public Main()
         {
@@ -34,12 +35,14 @@ namespace ImageValue
             draw = new Renderer();
             resize = new ResizeImage();
             recToJson = new RecToJson();
+            search = new SearchClass();
+            search.ImageFileChecker(@"C:\Users\dmitr\OneDrive\Desktop\DataSet\DataSet\Cards\combined_result.json");
             string appPath = Path.GetDirectoryName(Application.ExecutablePath) + "\\Configs";
             saveFileDialog1.InitialDirectory = appPath;
             openFileDialog1.InitialDirectory = appPath;
             saveFileDialog1.FileName = "";
             openFileDialog1.FileName = "";
-            pictureBox1.SizeMode = PictureBoxSizeMode.Normal; // ???? ? ????? ?????? ??????
+            ///pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage; // ???? ? ????? ?????? ??????
         }
 
 
@@ -54,7 +57,7 @@ namespace ImageValue
                 try
                 {
                     screenDir = new DirectoryInfo(folderBrowserDialog1.SelectedPath);
-                    screen = screenDir.GetFiles("*.png", SearchOption.AllDirectories);
+                    screen = screenDir.GetFiles("*.jpg", SearchOption.AllDirectories);
                     NextPicture(1);
                     NextImgBtn.Enabled = true;
                     AddRec.Enabled = true;
@@ -85,8 +88,8 @@ namespace ImageValue
 
             if (pictureIndex <= screen.Length - 1 && pictureIndex >= 0)
             {
-                var img = resize.ResizeBitmap(Image.FromFile(screen[pictureIndex].FullName), 970, 700);
-                pictureBox1.Image = img;
+                //var img = resize.ResizeBitmap(Image.FromFile(screen[pictureIndex].FullName), 970, 700);
+                pictureBox1.Image = Image.FromFile(screen[pictureIndex].FullName);
                 image = pictureBox1.Image;
                 var jsonPath = Path.ChangeExtension(jsonDir + "\\" + screen[pictureIndex].Name, ".json");
                 ImgCnt.Text = pictureIndex.ToString();
@@ -100,6 +103,8 @@ namespace ImageValue
                 else if (JsonConfig != null)
                 {
                     loadJsonConfig();
+                    var name = search.DoesFileNameExist(screen[pictureIndex].Name);
+                    rectObjList[0].Name = name;
                 }
                 else
                 {
@@ -147,10 +152,14 @@ namespace ImageValue
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
             var g = e.Graphics;
-            // ??? ?????? ? ????????
-            draw.Render(g, image, rectObjList);
 
-            // ?? ??? ??? ??? ???????? ? ???? ?? ???
+            // Передаем размер pictureBox1 в метод Render
+            if (image != null) // Добавим проверку, что изображение есть
+            {
+                draw.Render(g, image, rectObjList, pictureBox1.ClientSize);
+            }
+
+            // Рисуем новый прямоугольник, пока создаем его
             if (activeNewRec && currentNewRectangle != Rectangle.Empty)
             {
                 using (var pen = new Pen(Color.Blue, 2))
@@ -162,19 +171,23 @@ namespace ImageValue
 
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
+            // Конвертируем координаты мыши в координаты изображения
+            var imagePoint = PointToImage(e.Location);
+
             if (activeNewRec)
             {
-                newStart = new Point(e.X, e.Y);
+                // Для нового прямоугольника стартовая точка в координатах PictureBox
+                newStart = e.Location;
                 currentNewRectangle = new Rectangle(newStart, Size.Empty);
                 activeDraw = true;
                 return;
             }
 
-            // ?? ???? ???????? ?? ???? (? ?? ? ????? ? ???/? ?????? Layer)
             RecObj found = null;
+            // Ищем объект по координатам изображения
             for (int i = rectObjList.Count - 1; i >= 0; i--)
             {
-                if (rectObjList[i].HitTest(new Point(e.X, e.Y)))
+                if (rectObjList[i].HitTest(imagePoint))
                 {
                     found = rectObjList[i];
                     break;
@@ -186,9 +199,10 @@ namespace ImageValue
                 if (rectObj != null) rectObj.Active = false;
                 rectObj = found;
                 rectObj.Active = true;
-                rectObj.BeginOperation(e.X, e.Y);
+                // Передаем в объект уже сконвертированные координаты
+                rectObj.BeginOperation(imagePoint.X, imagePoint.Y);
                 activeDraw = true;
-                activeCorner = rectObj.HitCorner(new Point(e.X, e.Y));
+                activeCorner = rectObj.HitCorner(imagePoint);
                 activeResize = activeCorner != -1;
                 Cursor = activeResize ? Cursors.SizeAll : Cursors.Hand;
             }
@@ -206,9 +220,12 @@ namespace ImageValue
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
+            // Конвертируем координаты мыши в координаты изображения
+            var imagePoint = PointToImage(e.Location);
 
             if (activeNewRec && activeDraw)
             {
+                // Временный прямоугольник рисуем в координатах PictureBox
                 currentNewRectangle = CreateRect(newStart.X, newStart.Y, e.X, e.Y);
                 pictureBox1.Invalidate();
                 return;
@@ -218,15 +235,17 @@ namespace ImageValue
 
             if (activeResize && activeCorner != -1)
             {
-                rectObj.ResizeBy(e.X, e.Y, activeCorner);
+                // Передаем в объект уже сконвертированные координаты
+                rectObj.ResizeBy(imagePoint.X, imagePoint.Y, activeCorner);
             }
             else
             {
-                rectObj.MoveBy(e.X, e.Y);
+                // Передаем в объект уже сконвертированные координаты
+                rectObj.MoveBy(imagePoint.X, imagePoint.Y);
             }
 
-            // ?? ???? ??? ??? ?? ??? ? ???
-            int cornerUnder = rectObj.HitCorner(new Point(e.X, e.Y));
+            // Проверка попадания в угол для смены курсора
+            int cornerUnder = rectObj.HitCorner(imagePoint);
             Cursor = cornerUnder != -1 ? Cursors.SizeAll : Cursors.Hand;
 
             pictureBox1.Invalidate();
@@ -240,24 +259,22 @@ namespace ImageValue
                 activeDraw = false;
                 Cursor = Cursors.Default;
 
-                var r = currentNewRectangle;
-                if (r.Width >= 4 && r.Height >= 4)
-                {
-                    var newObj = new RecObj(r.X, r.Y, r.Width, r.Height, layer--);
+                // Конвертируем финальный прямоугольник из координат PictureBox в координаты изображения
+                var imageRect = RectangleToImage(currentNewRectangle);
 
-                    // ?? ???? ? ????????, ???? ????? ???? ??? (? ?????? ?????/? ??)
+                if (imageRect.Width >= 4 && imageRect.Height >= 4)
+                {
+                    // Создаем RecObj с координатами изображения
+                    var newObj = new RecObj(imageRect.X, imageRect.Y, imageRect.Width, imageRect.Height, layer--);
+
                     RecObj parent = null;
                     foreach (var c in rectObjList)
                     {
                         if (c.ContainsFully(newObj))
                         {
-                            if (parent == null) parent = c;
-                            else
+                            if (parent == null || (parent.Width * parent.Height) > (c.Width * c.Height))
                             {
-                                // ???? ?????? ???? (??, ? ?? ??? ????? ???? ??? ?????)
-                                var areaParent = parent.Width * parent.Height;
-                                var areaCandidate = c.Width * c.Height;
-                                if (areaCandidate < areaParent) parent = c;
+                                parent = c;
                             }
                         }
                     }
@@ -277,9 +294,8 @@ namespace ImageValue
                 return;
             }
 
-            // ????? ???????/????
-            activeNewRec = false;
             activeDraw = false;
+            activeResize = false;
             activeCorner = -1;
             Cursor = Cursors.Default;
             pictureBox1.Invalidate();
@@ -313,7 +329,7 @@ namespace ImageValue
         {
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                recToJson.SaveToFile(saveFileDialog1.FileName, rectObjList);
+                recToJson.SaveConfigFile(saveFileDialog1.FileName, rectObjList);
             }
         }
 
@@ -329,7 +345,7 @@ namespace ImageValue
         private void loadJsonConfig()
         {
             rectObjList.Clear();
-            rectObjList = recToJson.LoadFromFile(JsonConfig);
+            rectObjList = recToJson.LoadConfigFile(JsonConfig);
             pictureBox1.Invalidate();
             var roots = rectObjList.Where(x => x.Parent == null).ToList();
             FillTreeViewFromHierarchy(roots);
@@ -692,6 +708,37 @@ namespace ImageValue
                 pictureIndex = 1;
                 NextPicture(pictureIndex, true);
             }
+        }
+        private Point PointToImage(Point controlPoint)
+        {
+            if (pictureBox1.Image == null) return controlPoint;
+
+            var pbSize = pictureBox1.ClientSize;
+            var imgSize = pictureBox1.Image.Size;
+
+            // Защита от деления на ноль, если PictureBox или Image имеют нулевой размер
+            if (pbSize.Width == 0 || pbSize.Height == 0) return Point.Empty;
+
+            float scaleX = (float)imgSize.Width / pbSize.Width;
+            float scaleY = (float)imgSize.Height / pbSize.Height;
+
+            int imgX = (int)(controlPoint.X * scaleX);
+            int imgY = (int)(controlPoint.Y * scaleY);
+
+            return new Point(imgX, imgY);
+        }
+
+        /// <summary>
+        /// Конвертирует прямоугольник из координат PictureBox в координаты изображения.
+        /// </summary>
+        private Rectangle RectangleToImage(Rectangle controlRect)
+        {
+            if (pictureBox1.Image == null) return controlRect;
+
+            Point topLeft = PointToImage(controlRect.Location);
+            Point bottomRight = PointToImage(new Point(controlRect.Right, controlRect.Bottom));
+
+            return new Rectangle(topLeft.X, topLeft.Y, bottomRight.X - topLeft.X, bottomRight.Y - topLeft.Y);
         }
     }
 }

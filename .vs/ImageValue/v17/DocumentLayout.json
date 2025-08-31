@@ -7,32 +7,36 @@
       "RelativeMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|solutionrelative:imagevalue\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|E:\\Programming\\ImageValue\\imagevalue\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|solutionrelative:imagevalue\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|e:\\programming\\imagevalue\\imagevalue\\rectojson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|solutionrelative:imagevalue\\rectojson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|e:\\programming\\imagevalue\\imagevalue\\searchclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|solutionrelative:imagevalue\\searchclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|e:\\programming\\imagevalue\\imagevalue\\renderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|solutionrelative:imagevalue\\renderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|e:\\programming\\imagevalue\\imagevalue\\rectojson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|solutionrelative:imagevalue\\rectojson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|e:\\programming\\imagevalue\\imagevalue\\yamlmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|solutionrelative:imagevalue\\yamlmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|e:\\programming\\imagevalue\\imagevalue\\recvalue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|solutionrelative:imagevalue\\recvalue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|E:\\Programming\\ImageValue\\imagevalue\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|solutionrelative:imagevalue\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|e:\\programming\\imagevalue\\imagevalue\\recobj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|solutionrelative:imagevalue\\recobj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|e:\\programming\\imagevalue\\imagevalue\\recvalue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|solutionrelative:imagevalue\\recvalue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|E:\\Programming\\ImageValue\\imagevalue\\recvalue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|solutionrelative:imagevalue\\recvalue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|e:\\programming\\imagevalue\\imagevalue\\yamlmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|solutionrelative:imagevalue\\yamlmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{73103C66-6716-40D4-A06A-6C1F2154C21F}|ImageValue\\ImageValue.csproj|e:\\programming\\imagevalue\\imagevalue\\resizeimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -56,7 +60,7 @@
               "RelativeDocumentMoniker": "ImageValue\\Form1.cs",
               "ToolTip": "E:\\Programming\\ImageValue\\ImageValue\\Form1.cs",
               "RelativeToolTip": "ImageValue\\Form1.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAowFwAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAADkAAAAAAAAAAIAwwFoAAABnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-19T10:59:59.76Z",
               "IsPinned": true,
@@ -80,43 +84,68 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "YamlManager.cs",
-              "DocumentMoniker": "E:\\Programming\\ImageValue\\ImageValue\\YamlManager.cs",
-              "RelativeDocumentMoniker": "ImageValue\\YamlManager.cs",
-              "ToolTip": "E:\\Programming\\ImageValue\\ImageValue\\YamlManager.cs",
-              "RelativeToolTip": "ImageValue\\YamlManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGYAAAAPAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "SearchClass.cs",
+              "DocumentMoniker": "E:\\Programming\\ImageValue\\ImageValue\\SearchClass.cs",
+              "RelativeDocumentMoniker": "ImageValue\\SearchClass.cs",
+              "ToolTip": "E:\\Programming\\ImageValue\\ImageValue\\SearchClass.cs",
+              "RelativeToolTip": "ImageValue\\SearchClass.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAIwEYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T01:41:06.891Z"
+              "WhenOpened": "2025-08-31T15:14:20.997Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "RecToJson.cs",
               "DocumentMoniker": "E:\\Programming\\ImageValue\\ImageValue\\RecToJson.cs",
               "RelativeDocumentMoniker": "ImageValue\\RecToJson.cs",
               "ToolTip": "E:\\Programming\\ImageValue\\ImageValue\\RecToJson.cs",
               "RelativeToolTip": "ImageValue\\RecToJson.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAAwEEAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAowE8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T13:02:08.629Z"
+              "WhenOpened": "2025-08-20T13:02:08.629Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
+              "Title": "RecObj.cs",
+              "DocumentMoniker": "E:\\Programming\\ImageValue\\ImageValue\\RecObj.cs",
+              "RelativeDocumentMoniker": "ImageValue\\RecObj.cs",
+              "ToolTip": "E:\\Programming\\ImageValue\\ImageValue\\RecObj.cs",
+              "RelativeToolTip": "ImageValue\\RecObj.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAcwOAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T11:30:48.058Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "YamlManager.cs",
+              "DocumentMoniker": "E:\\Programming\\ImageValue\\ImageValue\\YamlManager.cs",
+              "RelativeDocumentMoniker": "ImageValue\\YamlManager.cs",
+              "ToolTip": "E:\\Programming\\ImageValue\\ImageValue\\YamlManager.cs",
+              "RelativeToolTip": "ImageValue\\YamlManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T01:41:06.891Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "E:\\Programming\\ImageValue\\ImageValue\\Form1.cs",
               "RelativeDocumentMoniker": "ImageValue\\Form1.cs",
               "ToolTip": "E:\\Programming\\ImageValue\\ImageValue\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "ImageValue\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T16:26:20.456Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "WhenOpened": "2025-08-19T16:26:20.456Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "RecValue.cs",
               "DocumentMoniker": "E:\\Programming\\ImageValue\\ImageValue\\RecValue.cs",
               "RelativeDocumentMoniker": "ImageValue\\RecValue.cs",
@@ -129,41 +158,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Renderer.cs",
               "DocumentMoniker": "E:\\Programming\\ImageValue\\ImageValue\\Renderer.cs",
               "RelativeDocumentMoniker": "ImageValue\\Renderer.cs",
               "ToolTip": "E:\\Programming\\ImageValue\\ImageValue\\Renderer.cs",
               "RelativeToolTip": "ImageValue\\Renderer.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwDIAAABaAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T16:29:58.373Z"
+              "WhenOpened": "2025-08-19T16:29:58.373Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "RecValue.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "Title": "RecValue.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "E:\\Programming\\ImageValue\\ImageValue\\RecValue.cs",
               "RelativeDocumentMoniker": "ImageValue\\RecValue.cs",
-              "ToolTip": "D:\\Programm\\Poker\\ImageValue\\ImageValue\\RecValue.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "ToolTip": "E:\\Programming\\ImageValue\\ImageValue\\RecValue.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "ImageValue\\RecValue.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-19T16:17:13.339Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "RecObj.cs",
-              "DocumentMoniker": "E:\\Programming\\ImageValue\\ImageValue\\RecObj.cs",
-              "RelativeDocumentMoniker": "ImageValue\\RecObj.cs",
-              "ToolTip": "E:\\Programming\\ImageValue\\ImageValue\\RecObj.cs",
-              "RelativeToolTip": "ImageValue\\RecObj.cs",
-              "ViewState": "AgIAAK0AAAAAAAAAAAAcwN0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T11:30:48.058Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "ResizeImage.cs",
               "DocumentMoniker": "E:\\Programming\\ImageValue\\ImageValue\\ResizeImage.cs",
               "RelativeDocumentMoniker": "ImageValue\\ResizeImage.cs",
