@@ -26,7 +26,6 @@ namespace ImageValue
         private Point newStart;
         private YamlManager manager = new YamlManager();
         private string JsonConfig;
-        private SearchClass search;
 
         public Main()
         {
@@ -35,8 +34,8 @@ namespace ImageValue
             draw = new Renderer();
             resize = new ResizeImage();
             recToJson = new RecToJson();
-            search = new SearchClass();
-            search.ImageFileChecker(@"C:\Users\dmitr\OneDrive\Desktop\DataSet\DataSet\Cards\combined_result.json");
+            //search = new SearchClass();
+            //search.ImageFileChecker(@"C:\Users\dmitr\OneDrive\Desktop\DataSet\DataSet\Cards\combined_result.json");
             string appPath = Path.GetDirectoryName(Application.ExecutablePath) + "\\Configs";
             saveFileDialog1.InitialDirectory = appPath;
             openFileDialog1.InitialDirectory = appPath;
@@ -57,7 +56,7 @@ namespace ImageValue
                 try
                 {
                     screenDir = new DirectoryInfo(folderBrowserDialog1.SelectedPath);
-                    screen = screenDir.GetFiles("*.jpg", SearchOption.AllDirectories);
+                    screen = screenDir.GetFiles("*.png", SearchOption.AllDirectories);
                     NextPicture(1);
                     NextImgBtn.Enabled = true;
                     AddRec.Enabled = true;
@@ -103,8 +102,8 @@ namespace ImageValue
                 else if (JsonConfig != null)
                 {
                     loadJsonConfig();
-                    var name = search.DoesFileNameExist(screen[pictureIndex].Name);
-                    rectObjList[0].Name = name;
+                    //var name = search.DoesFileNameExist(screen[pictureIndex].Name);
+                    //rectObjList[0].Name = name;
                 }
                 else
                 {
