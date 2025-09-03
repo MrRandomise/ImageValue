@@ -305,6 +305,7 @@ namespace ImageValue
             if (rectObj != null)
             {
                 recValue.recObj = rectObj;
+                recValue.FilePath = screenDir.FullName + "\\data.yaml";
                 if (recValue.ShowDialog() == DialogResult.OK)
                 {
                     rectObj = recValue.recObj;

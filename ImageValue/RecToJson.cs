@@ -96,36 +96,27 @@ namespace ImageValue
 
         private JObject RecObjToJToken(List<RecObj> rects)
         {
-            var container = new JObject();
-            if (rects == null) return container;
-
+            var arr = new JObject();
             foreach (var r in rects)
             {
-                var obj = new JObject();
-
-                if (!string.IsNullOrEmpty(r.Value))
+                var o = new JObject
                 {
-                    obj["label"] = r.Value;
-                }
-                if (r.X != 0 && r.Y != 0 && r.Width != 0 && r.Height != 0)
-                {
-                    obj["bbox"] = new JObject
+                    ["name"] = r.Name,
+                    ["label"] = string.IsNullOrEmpty(r.Value) ? null : r.Value,
+                    ["bbox"] = (r.X != 0 || r.Y != 0 || r.Width != 0 || r.Height != 0) ? new JObject
                     {
                         ["x"] = r.X,
                         ["y"] = r.Y,
                         ["w"] = r.Width,
                         ["h"] = r.Height
-                    };
-                }
+                    } : null
+                };
                 if (r.Children != null && r.Children.Count > 0)
-                {
-                    obj["items"] = RecObjToJToken(r.Children); // Рекурсия без флага
-                }
+                    o["items"] = RecObjToJToken(r.Children);
 
-                container[r.Name] = obj;
+                arr.Add(o);
             }
-
-            return container;
+            return arr;
         }
 
         public void SaveToTxtYml(List<RecObj> rects, string path, string name, Size? imageSize = null)

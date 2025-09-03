@@ -38,6 +38,7 @@
             colorDialog1 = new ColorDialog();
             ColorBtn = new Button();
             NoShwBox = new CheckBox();
+            listBox1 = new ListBox();
             SuspendLayout();
             // 
             // label1
@@ -122,11 +123,22 @@
             NoShwBox.Text = "Не отоброжать";
             NoShwBox.UseVisualStyleBackColor = true;
             // 
+            // listBox1
+            // 
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 15;
+            listBox1.Location = new Point(223, 39);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(283, 229);
+            listBox1.TabIndex = 10;
+            listBox1.MouseDoubleClick += listBox1_MouseDoubleClick;
+            // 
             // RecValue
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(233, 279);
+            ClientSize = new Size(516, 279);
+            Controls.Add(listBox1);
             Controls.Add(NoShwBox);
             Controls.Add(ColorBtn);
             Controls.Add(NameText);
@@ -158,5 +170,6 @@
         private ColorDialog colorDialog1;
         private Button ColorBtn;
         private CheckBox NoShwBox;
+        private ListBox listBox1;
     }
 }
